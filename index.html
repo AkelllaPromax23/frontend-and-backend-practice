@@ -1,52 +1,67 @@
-Тестовая страница
 <!DOCTYPE html>
-<html lang = "ru">
-    <head>
-        <meta charset="UTF=8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Семестровая работа</title>
-    </head>
-    <body>
-        <div id="header">Хэдер</div>
-        <div id="menu">
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="pages/news.html">Новости</a></li>
-                <li><a href="pages/practices.html">Практики</a></li>
-                <li><a href="pages/goods.html">Товары</a></li>
-                <li><a href="pages/contacts.html">Контакты</a></li>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Семестровая работа</title>
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="header">Хэдер</div>
+        
+        <div class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="pages/news.html">Новости</a></li>
+                <li class="nav-item"><a class="nav-link" href="pages/practices.html">Практики</a></li>
+                <li class="nav-item"><a class="nav-link" href="pages/goods.html">Товары</a></li>
+                <li class="nav-item"><a class="nav-link" href="pages/contacts.html">Контакты</a></li>
             </ul>
         </div>
-        <div id="content">
-            <p>Информация об авторе</p>
-            <img src="сф трахатькупить онлайн доставка бесплатно крутые очки золотая цепь 2016.jpg" alt="Фото автора" width="200"
-    height="250">
-            <p>Карапетян Артем Липаритович</p>
-            <p>ЭФБО-12-24</p>
-            <p>Обо мне:На небе только и разговоров, 
+        
+        <div class="content">
+            <div class="profile-header">
+                <h1 class="profile-title">Информация об авторе</h1>
+                <img class="profile-photo" src="C:\Users\Артём\Desktop\frontend-and-backend-practice\images\сф трахатькупить онлайн доставка бесплатно крутые очки золотая цепь 2016.jpg" alt="Фото автора">
+                <h2 class="profile-name">Карапетян Артем</h2>
+                <p class="profile-group">ЭФБО-12-24</p>
+            </div>
+            
+            <div class="about-me">
+                <p>Обо мне:На небе только и разговоров, 
                 что о море и о закате, там говорят, как чертовски здорово наблюдать ...за огромным огненным шаром, как он тает в волнах и, еле видимый свет,
                 словно от свечи, горит где-то в глубине..Стоя на берегу, ты чувствуешь, как обдувающий лицо ветер несет с собой соленый запах моря..
-                Чувствуя прохладу, в голову тебе лезут мысли, что это пожалуй, единственное, ради чего можно жить.</p>
-            <div>Я тоже могу вставить цитату вместо моей биографии</div>
-            <div>Игра хуем на рояле</div>
-            <div>Закрыл весь основной контет ультракила на P-ранг</div>
-            <div>Божественно играю на Маясе</div>
-            <div>
-                Мой опыт работы
-                <div>
-                    Опыт 1<br>
-                    Работал в ростелекоме полтора меяца
+                Чувствуя прохладу, в голову тебе лезут мысли, что это пожалуй, единственное, ради чего можно жить. </p>
+            </div>
+            
+            <div class="skills-container">
+                <div class="skill-tag">Я тоже могу вставить цитату вместо моей биографии</div>
+                <div class="skill-tag">Игра хуем на рояле</div>
+                <div class="skill-tag">Закрыл весь основной контет ультракила на P-ранг</div>
+                <div class="skill-tag">Божественно играю на Маясе</div>
+            </div>
+            
+            <div class="experience-section">
+                <h2 class="section-title">Мой опыт работы</h2>
+                
+                <div class="experience-card">
+                    <h3 class="experience-title">Продаван в Ростелекоме</h3>
+                    <p class="experience-desc">Звонил людям в рабочие время и мешал им работать</p>
                 </div>
-                <div>
-                    Опыт 2<br>
-                    Работал в транкоме 2 месяца
+                
+                <div class="experience-card">
+                    <h3 class="experience-title">Транком</h3>
+                    <p class="experience-desc">Копал траншеи и прокладывал провада для муфт</p>
                 </div>
-                <div>
-                    Опыт 3<br>
-                    Работал лопатчиком когда строил участок дедушке
+                
+                <div class="experience-card">
+                    <h3 class="experience-title">Разнорабочий на участке у дедудшки</h3>
+                    <p class="experience-desc">Таскал копал и работал с песком и шебнем</p>
                 </div>
             </div>
         </div>
-        <div id="footer">Футер</div>
-    </body>
+        <div class="footer">Футер</div>
+    </div>
+</body>
 </html>
