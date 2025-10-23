@@ -252,7 +252,7 @@ grid-area: footer;
     font-weight: 500;
 }
 
-.news-item {
+.news-card {
     background: white;
     padding: 25px;
     border-radius: 12px;
@@ -272,14 +272,14 @@ grid-area: footer;
     margin: 0 0 10px 0;
 }
 
-.news-date {
+.news-meta {
     font-size: 14px;
     color: #7f8c8d;
     font-weight: 500;
     margin: 0 0 15px 0;
 }
 
-.news-info {
+.news-text {
     font-size: 16px;
     color: #3e414e;
     font-weight: 400;
