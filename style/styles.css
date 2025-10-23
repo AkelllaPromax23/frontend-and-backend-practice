@@ -337,7 +337,7 @@ grid-area: footer;
 }
 
 /*Адаптивность*/
-@media (max-width 768px) {
+@media (max-width: 768px) {
     .nav-list{
         flex-direction: column;
         gap: 10px;
