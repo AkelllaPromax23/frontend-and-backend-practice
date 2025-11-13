@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -152,7 +153,13 @@
 <body>
     <div class="page-container">
         <header class="header">
-            <p>Хэдер</p>
+            <div class="header__container">
+                <h1 class="header__title">Портфолио</h1>
+                <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+                    <span class="theme-toggle__icon theme-toggle__icon--sun">☀️</span>
+                    <span class="theme-toggle__icon theme-toggle__icon--moon">🌙</span>
+                </button>
+            </div>
         </header>
         <nav class="nav">
             <ul class="nav-list">
@@ -296,6 +303,22 @@
                 if (event.key === 'Enter' && event.target.type !== 'textarea'){
                         event.preventDefault();
                 }
+            });
+            //переключение темы
+            document.addEventListener('DOMContentLoaded', function() {
+                const themeToggle = document.getElementById('themeToggle');
+                if (themeToggle) {
+                    themeToggle.addEventListener('click', function() {
+                        const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+                        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                        document.documentElement.setAttribute('data-theme', newTheme);
+                        localStorage.setItem('theme', newTheme);
+                    });
+                }
+                
+                // Применяем сохраненную тему
+                const savedTheme = localStorage.getItem('theme') || 'light';
+                document.documentElement.setAttribute('data-theme', savedTheme);
             });
          </script>
     </div>

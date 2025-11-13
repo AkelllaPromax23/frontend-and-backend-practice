@@ -8,7 +8,13 @@
 <body>
     <div class="page-container">
         <header class="header">
-            <h1>Портфолио</h1>
+            <div class="header__container">
+                <h1 class="header__title">Портфолио</h1>
+                <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+                    <span class="theme-toggle__icon theme-toggle__icon--sun">☀️</span>
+                    <span class="theme-toggle__icon theme-toggle__icon--moon">🌙</span>
+                </button>
+            </div>
         </header>
     
         <nav class="nav">
@@ -26,7 +32,7 @@
             <section class="products-container">
                 <article class="product-item">
                     <img class="products" src="..\images\6354095532.jpg" alt="Товар 1">
-                    <div class="product-name">Невероятные нарды для троих сделаные армяниниом с золотыми руками</div>   
+                    <div class="product-name">Невероятные нарды на троих сделаные армяниниом с золотыми руками</div>   
                     <div class="product-price">Цена: 30.000 руб. и приглашение на свадьбу для мастера</div>
                 </article>
                 <article class="product-item">
@@ -46,5 +52,28 @@
             <p>Футер</p>
         </footer>
     </div>
+
+    <script>
+        // Функция для переключения темы
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        }
+
+        // Инициализация при загрузке страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            // Применяем сохраненную тему
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            
+            // Добавляем обработчик на кнопку переключения темы
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', toggleTheme);
+            }
+        });
+    </script>
 </body>
 </html>
