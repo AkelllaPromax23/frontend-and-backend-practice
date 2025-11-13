@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Семестровая работа</title>
+    <title>Товары</title>
     <link rel="stylesheet" href="../style/styles.css">
 </head>
 <body>
@@ -16,7 +17,7 @@
                 </button>
             </div>
         </header>
-    
+
         <nav class="nav">
             <ul class="nav-list">
                 <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
@@ -26,25 +27,131 @@
                 <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
             </ul>
         </nav>
-           <main class="content">
-                <h2 class="section-title">Наши товары</h2>
 
-            <section class="products-container">
-                <article class="product-item">
-                    <img class="products" src="..\images\6354095532.jpg" alt="Товар 1">
-                    <div class="product-name">Невероятные нарды на троих сделаные армяниниом с золотыми руками</div>   
-                    <div class="product-price">Цена: 30.000 руб. и приглашение на свадьбу для мастера</div>
-                </article>
-                <article class="product-item">
-                    <img class="products" src="..\images\140P_KIDA11a.jpg" alt="Товар 2">
-                    <div class="product-name">Доллоравая купюра</div>
-                    <div class="product-price">Цена: 1500руб.</div>
-                </article>
-                <article class="product-item">
-                    <img class="products" src="..\images\defee5608f430f46be2c6983fcd574db.jpg" alt="Товар 3">
-                    <div class="product-name">Маска Тони</div>
-                    <div class="product-price">Цена: 79855143992 руб.</div>
-                </article>
+        <main class="content">
+            <h2 class="section-title">Наши товары</h2>
+
+            <section class="products">
+                <h2 class="products__title">Наши товары</h2>
+                
+                <div class="products__grid">
+                    <!-- Карточка 1 - Базовая -->
+                    <article class="product-card" data-product-id="1">
+                        <div class="product-card__image-container">
+                            <img class="product-card__image" src="../images/6354095532.jpg" alt="Невероятные нарды для троих">
+                            <div class="product-card__badges">
+                                <span class="product-card__badge product-card__badge--new">NEW</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card__content">
+                            <h3 class="product-card__title">Невероятные нарды для троих</h3>
+                            <p class="product-card__description">Сделаны армянином с золотыми руками. Уникальный дизайн, ручная работа.</p>
+                            
+                            <div class="product-card__price">
+                                <span class="product-card__price-current">30.000 ₽</span>
+                                <span class="product-card__price-bonus">+ приглашение на свадьбу мастера</span>
+                            </div>
+                            
+                            <div class="product-card__actions">
+                                <button class="product-card__button product-card__button--primary">В корзину</button>
+                                <button class="product-card__button product-card__button--secondary">Подробнее</button>
+                            </div>
+                            
+                            <div class="product-card__features">
+                                <span class="product-card__feature">🎯 Ручная работа</span>
+                                <span class="product-card__feature">⚡ Эксклюзив</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Карточка 2 - Со скидкой -->
+                    <article class="product-card product-card--discount" data-product-id="2">
+                        <div class="product-card__image-container">
+                            <img class="product-card__image" src="../images/140P_KIDA11a.jpg" alt="Долларовая купюра">
+                            <div class="product-card__badges">
+                                <span class="product-card__badge product-card__badge--discount">-20%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card__content">
+                            <h3 class="product-card__title">Долларовая купюра</h3>
+                            <p class="product-card__description">Коллекционная купюра в отличном состоянии. Идеально для подарка.</p>
+                            
+                            <div class="product-card__price">
+                                <span class="product-card__price-current">1.500 ₽</span>
+                                <span class="product-card__price-old">1.875 ₽</span>
+                            </div>
+                            
+                            <div class="product-card__actions">
+                                <button class="product-card__button product-card__button--primary">В корзину</button>
+                                <button class="product-card__button product-card__button--secondary">Подробнее</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Карточка 3 - Выбранная -->
+                    <article class="product-card product-card--selected" data-product-id="3">
+                        <div class="product-card__image-container">
+                            <img class="product-card__image" src="../images/defee5608f430f46be2c6983fcd574db.jpg" alt="Маска Тони Монтана">
+                            <div class="product-card__badges">
+                                <span class="product-card__badge product-card__badge--popular">POPULAR</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card__content">
+                            <h3 class="product-card__title">Маска Тони Монтана</h3>
+                            <p class="product-card__description">Легендарная маска из культового фильма. Высококачественная реплика.</p>
+                            
+                            <div class="product-card__price">
+                                <span class="product-card__price-current">79.855.143.992 ₽</span>
+                                <span class="product-card__price-note">Ограниченный тираж</span>
+                            </div>
+                            
+                            <div class="product-card__actions">
+                                <button class="product-card__button product-card__button--primary">В корзину</button>
+                                <button class="product-card__button product-card__button--secondary">Подробнее</button>
+                            </div>
+                            
+                            <div class="product-card__status">
+                                <span class="product-card__status-text">✅ В корзине</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Карточка 4 - Распродажа -->
+                    <article class="product-card product-card--sale" data-product-id="4">
+                        <div class="product-card__image-container">
+                            <img class="product-card__image" src="../images/6354095532.jpg" alt="Нарды классические">
+                            <div class="product-card__badges">
+                                <span class="product-card__badge product-card__badge--sale">SALE</span>
+                                <span class="product-card__badge product-card__badge--hot">HOT</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card__content">
+                            <h3 class="product-card__title">Нарды классические</h3>
+                            <p class="product-card__description">Традиционные нарды из натурального дерева. Отличное качество.</p>
+                            
+                            <div class="product-card__price">
+                                <span class="product-card__price-current">15.000 ₽</span>
+                                <span class="product-card__price-old">25.000 ₽</span>
+                            </div>
+                            
+                            <div class="product-card__progress">
+                                <div class="product-card__progress-bar">
+                                    <div class="product-card__progress-fill" style="width: 75%"></div>
+                                </div>
+                                <span class="product-card__progress-text">Осталось: 3 шт.</span>
+                            </div>
+                            
+                            <div class="product-card__actions">
+                                <button class="product-card__button product-card__button--primary">В корзину</button>
+                                <button class="product-card__button product-card__button--secondary">Подробнее</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </section>
         </main>
 
@@ -68,11 +175,67 @@
             const savedTheme = localStorage.getItem('theme') || 'light';
             document.documentElement.setAttribute('data-theme', savedTheme);
             
-            // Добавляем обработчик на кнопку переключения темы
+            // Добавляем обработчик на кнопку переключателя темы
             const themeToggle = document.getElementById('themeToggle');
             if (themeToggle) {
                 themeToggle.addEventListener('click', toggleTheme);
             }
+
+            // Функциональность для карточек товаров
+            const productCards = document.querySelectorAll('.product-card');
+            
+            productCards.forEach(card => {
+                // Клик по карточке
+                card.addEventListener('click', function(e) {
+                    // Не срабатывает при клике на кнопки
+                    if (e.target.closest('.product-card__button')) return;
+                    
+                    const productId = this.dataset.productId;
+                    console.log('Выбран товар:', productId);
+                    
+                    // Переключение состояния выбора
+                    this.classList.toggle('product-card--selected');
+                });
+                
+                // Добавление в корзину
+                card.addEventListener('click', function(e) {
+                    if (e.target.classList.contains('product-card__button--primary')) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        
+                        const productId = this.dataset.productId;
+                        const productTitle = this.querySelector('.product-card__title').textContent;
+                        
+                        // В реальном приложении здесь был бы AJAX запрос
+                        console.log('Добавлен в корзину:', productTitle, productId);
+                        
+                        // Визуальная обратная связь
+                        const button = e.target;
+                        const originalText = button.textContent;
+                        button.textContent = '✅ Добавлено!';
+                        button.style.background = 'var(--color-success)';
+                        
+                        setTimeout(() => {
+                            button.textContent = originalText;
+                            button.style.background = '';
+                        }, 2000);
+                    }
+                });
+                
+                // Кнопка "Подробнее"
+                card.addEventListener('click', function(e) {
+                    if (e.target.classList.contains('product-card__button--secondary')) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        
+                        const productId = this.dataset.productId;
+                        const productTitle = this.querySelector('.product-card__title').textContent;
+                        
+                        // В реальном приложении здесь было бы модальное окно
+                        alert(`Подробная информация о товаре: ${productTitle}\nID: ${productId}`);
+                    }
+                });
+            });
         });
     </script>
 </body>
