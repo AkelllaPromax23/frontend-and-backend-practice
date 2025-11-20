@@ -134,7 +134,7 @@
          }
 
          /*Адаптивность*/
-         @media (max-widht: 600px) {
+         @media (max-width: 600px) { /* ИСПРАВЛЕНО: max-widht -> max-width */
             dialog {
                 margin: 1rem;
                 width: calc(100vw - 2rem);
@@ -161,24 +161,24 @@
                 </button>
             </div>
         </header>
+        
         <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
-                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+            <ul class="nav__list"> <!-- ИСПРАВЛЕНО: nav-list -> nav__list -->
+                <li class="nav__item"><a class="nav__link" href="../index.html">Главная</a></li> <!-- ИСПРАВЛЕНО классы -->
+                <li class="nav__item"><a class="nav__link" href="news.html">Новости</a></li>
+                <li class="nav__item"><a class="nav__link" href="practices.html">Практики</a></li>
+                <li class="nav__item"><a class="nav__link" href="goods.html">Товары</a></li>
+                <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></li>
             </ul>
         </nav>
         
-        <main class="content">
+        <main class="main"> <!-- ИСПРАВЛЕНО: content -> main -->
             <section class="contacts-container">
                 <h2 class="section-title">Контакты</h2>
 
-            <section class="contacts-container">
                 <article class="email">
                     <h3>Адрес электронной почты:</h3>
-                    <p>karapetyanartem42@gmail.com </p>
+                    <p>karapetyanartem42@gmail.com</p>
                 </article>
 
                 <article class="adress">
@@ -203,10 +203,10 @@
 
                 <button class="contact-button" onclick="contactModal.showModal()">Связаться с нами</button>
             </section>
-            </main>
+        </main>
         
         <footer class="footer">
-            <p>>© 2025 Все права защищены. Контактная информация</p>
+            <p>© 2025 Все права защищены. Контактная информация</p> <!-- ИСПРАВЛЕНО: убрал лишний > -->
         </footer>
 
         <!-- Модальное окно для формы обратной связи -->
@@ -251,7 +251,7 @@
                     </div>
                     <div class="modal-actions">
                         <!-- Кнопка отмены с автоматическим закрытием через form method="dialog" -->
-                        <button type="submit" class="btn btnsecondary">Отмена</button>
+                        <button type="submit" class="btn btn-secondary">Отмена</button> <!-- ИСПРАВЛЕНО: btnsecondary -> btn-secondary -->
                         <!-- Кнопка отправки с обработкой через JavaScript -->
                         <button type="button" class="btn btn-primary" onclick="submitForm()">Отправить</button>
                     </div>
@@ -298,12 +298,12 @@
             });
 
             // Обработка отправки формы через Enter (предотвращаем стандартное поведение)
-
             document.getElementById('feedbackForm').addEventListener('keypress', function(event) {
                 if (event.key === 'Enter' && event.target.type !== 'textarea'){
                         event.preventDefault();
                 }
             });
+
             //переключение темы
             document.addEventListener('DOMContentLoaded', function() {
                 const themeToggle = document.getElementById('themeToggle');
