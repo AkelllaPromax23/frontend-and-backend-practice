@@ -3,320 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная - Портфолио</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <style>
-        .theme-toggle {
-            border: none;
-            background: none;
-            font-size: 1.5rem;
-            position: relative;
-            width: 40px;
-            height: 40px;
-        }
-        .theme-toggle__icon {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            transition: opacity 0.3s ease;
-        }
-        [data-theme="dark"] {
-            background-color: #1a1a1a;
-            color: #ffffff;
-        }
-        [data-theme="dark"] .bg-light {
-            background-color: #2d2d2d !important;
-        }
-        [data-theme="dark"] .card {
-            background-color: #3d3d3d;
-            color: #ffffff;
-        }
-        [data-theme="dark"] .text-muted {
-            color: #cccccc !important;
-        }
-    </style>
+    <title>Главная- Портфолио</title>
+    <link rel="stylesheet" href="style/styles.css">
 </head>
-<body class="bg-light">
-    <div class="container-fluid p-0">
-        <!-- Header -->
-        <header class="bg-primary text-white py-4">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col">
-                        <h1 class="h3 mb-1">Мое Портфолио</h1>
-                        <p class="mb-0 opacity-75">Студент разработчик</p>
-                    </div>
-                    <div class="col-auto">
-                        <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
-                            <span class="theme-toggle__icon theme-toggle__icon--sun">☀️</span>
-                            <span class="theme-toggle__icon theme-toggle__icon--moon">🌙</span>
-                        </button>
-                    </div>
-                </div>
+<body>
+    <!-- Основной контейнер -->
+    <div class="page">
+
+        <!-- Шапка -->
+        <header class="header">
+            <div class="header__container">
+                <h1 class="header__title">Мое Портфолио</h1>
+                <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+            <span class="theme-toggle__icon theme-toggle__icon--sun">
+                ☀️
+            </span>
+            <span class="theme-toggle__icon theme-toggle__icon--moon">
+                🌙
+            </span>
+                </button>
             </div>
         </header>
 
-        <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.html">
-                                <i class="bi bi-house me-1"></i>Главная
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="pages/news.html">
-                                <i class="bi bi-newspaper me-1"></i>Новости
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="pages/practices.html">
-                                <i class="bi bi-code-slash me-1"></i>Практики
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="pages/goods.html">
-                                <i class="bi bi-cart me-1"></i>Товары
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="pages/contacts.html">
-                                <i class="bi bi-telephone me-1"></i>Контакты
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <!-- Навигация -->
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
+                <li class="nav__item"><a class="nav__link" href="pages/news.html">Новости</a></li>
+                <li class="nav__item"><a class="nav__link" href="pages/practices.html">Практики</a></li>
+                <li class="nav__item"><a class="nav__link" href="pages/goods.html">Товары</a></li>
+                <li class="nav__item"><a class="nav__link" href="pages/contacts.html">Контакты</a></li>
+            </ul>
         </nav>
+        
+        <!-- Основной контент -->
+        <main class="main">
 
-        <!-- Main Content -->
-        <main class="container my-4">
-            <!-- Profile Section -->
-            <section class="mb-5">
-                <div class="card shadow-sm">
-                    <div class="card-body p-4">
-                        <div class="row align-items-center">
-                            <div class="col-md-3 text-center mb-3 mb-md-0">
-                                <img src="images/dragula.jpg" alt="Фото автора" class="img-fluid rounded-circle" style="width: 150px; height: 150px; object-fit: cover;">
-                            </div>
-                            <div class="col-md-9">
-                                <h2 class="card-title h4 text-primary">Карапетян Артем</h2>
-                                <p class="card-text text-muted mb-2">
-                                    <i class="bi bi-bookmark-check-fill text-primary"></i>
-                                    Студент группы ЭФБО-12-24
-                                </p>
-                                <p class="card-text">
-                                    Факультет информационных технологий, специальность "Веб-разработка"
-                                </p>
-                                <div class="d-flex gap-2 flex-wrap">
-                                    <span class="badge bg-primary">HTML/CSS</span>
-                                    <span class="badge bg-success">JavaScript</span>
-                                    <span class="badge bg-info">Bootstrap</span>
-                                    <span class="badge bg-warning">React</span>
-                                </div>
-                            </div>
-                        </div>
+            <!-- Профиль -->
+            <section class="profile">
+                <h1 class="profile__title">Информация об авторе</h1>
+                <div class="profile__content">
+                    <img class="profile__photo" src="images\dragula.jpg" alt="Фото автора">
+                    <div class="profile__info">
+                        <h2 class="profile__name">Карапетян Артем</h2>
+                        <p class="profile-group">ЭФБО-12-24</p>
                     </div>
                 </div>
             </section>
-
-            <!-- About Section -->
-            <section class="mb-5">
-                <div class="card shadow-sm">
-                    <div class="card-header bg-light">
-                        <h3 class="card-title h5 mb-0">
-                            <i class="bi bi-person-circle text-primary"></i>
-                            Обо мне
-                        </h3>
+            
+            <!-- Обо мне -->
+            <section class="about">
+                <h2 class="about__title">Обо мне</h2>
+                <div class="about__content"
+                    <p class="about_text">Обо мне:На небе только и разговоров, 
+                    что о море и о закате, там говорят, как чертовски здорово наблюдать ...за огромным огненным шаром, как он тает в волнах и, еле видимый свет,
+                    словно от свечи, горит где-то в глубине..Стоя на берегу, ты чувствуешь, как обдувающий лицо ветер несет с собой соленый запах моря..
+                    Чувствуя прохладу, в голову тебе лезут мысли, что это пожалуй, единственное, ради чего можно жить. </p>
+                </div>
+            </section>
+            
+            <!-- Навыки -->
+            <section class="skills">
+                <h2 class="skills__title">Мои навыки</h2>
+                <div class="skill__grid">
+                    <div class="skill skill--quote">
+                         <span class="skill__text">Я тоже могу вставить цитату вместо моей биографии</span>
+                    </div>     
+                    <div class="skill skill--quote">
+                        <span>Крутой ну очень крутой чувачок</span>
                     </div>
-                    <div class="card-body">
-                        <p class="card-text">
-                            Обо мне: На небе только и разговоров, что о море и о закате, там говорят, как чертовски здорово наблюдать ...за огромным огненным шаром, как он тает в волнах и, еле видимый свет, словно от свечи, горит где-то в глубине..
-                        </p>
-                        <p class="card-text">
-                            Стоя на берегу, ты чувствуешь, как обдувающий лицо ветер несет с собой соленый запах моря.. Чувствуя прохладу, в голову тебе лезут мысли, что это пожалуй, единственное, ради чего можно жить.
-                        </p>
+                    <div class="skill skill--quote">
+                        <span>Закрыл весь основной контет ультракила на P-ранг</span>
+                    </div>
+                    <div class="skill skill--quote">
+                        <span>Божественно играю на Маясе</span>
                     </div>
                 </div>
             </section>
-
-            <!-- Skills Section -->
-            <section class="mb-5">
-                <div class="card shadow-sm">
-                    <div class="card-header bg-light">
-                        <h3 class="card-title h5 mb-0">
-                            <i class="bi bi-tools text-primary"></i>
-                            Мои навыки
-                        </h3>
-                    </div>
-                    <div class="card-body">
-                        <div class="row g-3">
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="card h-100 bg-primary text-white">
-                                    <div class="card-body text-center">
-                                        <p class="card-text">"Я тоже могу вставить цитату вместо моей биографии"</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="card h-100 bg-success text-white">
-                                    <div class="card-body text-center">
-                                        <p class="card-text">"Крутой ну очень крутой чувачок"</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="card h-100 bg-info text-white">
-                                    <div class="card-body text-center">
-                                        <p class="card-text">"Закрыл весь основной контент ультракила на P-ранг"</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="card h-100 bg-warning text-dark">
-                                    <div class="card-body text-center">
-                                        <p class="card-text">"Божественно играю на Маясе"</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Experience Section -->
-            <section class="mb-5">
-                <div class="card shadow-sm">
-                    <div class="card-header bg-light">
-                        <h3 class="card-title h5 mb-0">
-                            <i class="bi bi-briefcase text-primary"></i>
-                            Мой опыт работы
-                        </h3>
-                    </div>
-                    <div class="card-body">
-                        <div class="row g-3">
-                            <div class="col-md-4">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Продаван в Ростелекоме</h5>
-                                        <p class="card-text text-muted">Звонил людям в рабочее время и мешал им работать</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Транком</h5>
-                                        <p class="card-text text-muted">Копал траншеи и прокладывал провода для муфт</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Разнорабочий на участке у дедушки</h5>
-                                        <p class="card-text text-muted">Таскал копал и работал с песком и щебнем</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <!-- Footer -->
-        <footer class="bg-dark text-white py-4 mt-5">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <p class="mb-0">&copy; 2024 Портфолио студента. Все права защищены.</p>
-                    </div>
-                    <div class="col-md-6 text-md-end">
-                        <a href="pages/contacts.html" class="text-white text-decoration-none me-3">Контакты</a>
-                        <a href="#" class="text-white text-decoration-none">Политика конфиденциальности</a>
-                    </div>
-                </div>
+            
+            <!-- Проекты -->
+            <section class="experience">
+                <h2 class="experience__title">Мой опыт работы</h2>
+                <div class="experience__grid">
+                    <article class="experience-card">
+                        <h3 class="experience-card__title">Продаван в Ростелекоме</h3>
+                        <p class="experience-card__description">Звонил людям в рабочие время и мешал им работать</p>
+                </article>
+                <article class="experience-card">
+                    <h3 class="experience-card__title">Транком</h3>
+                    <p class="experience-card__description">Копал траншеи и прокладывал провода для муфт</p>
+                </article>
+                <article class="experience-card">
+                    <h3 class="experience-card__title">Разнорабочий на участке у дедушки</h3>
+                    <p class="experience-card__description">Таскал копал и работал с песком и щебнем</p>
+                </article>
             </div>
+        </section>
+    </main>
+
+        <!-- Подвал -->
+        <footer class="footer">
+            <p class="footer__text">Футер</p>
         </footer>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Функция для применения темы
-        function applyTheme(theme) {
-            document.documentElement.setAttribute('data-theme', theme);
-            localStorage.setItem('theme', theme);
-            updateThemeIcon(theme);
-        }
+// Функция для применения темы
+function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    updateThemeIcon(theme);
+}
 
-        // Функция для обновления иконки
-        function updateThemeIcon(theme) {
-            const toggle = document.getElementById('themeToggle');
-            if (!toggle) return;
-            
-            const sunIcon = toggle.querySelector('.theme-toggle__icon--sun');
-            const moonIcon = toggle.querySelector('.theme-toggle__icon--moon');
-            
-            if (theme === 'dark') {
-                sunIcon.style.opacity = '0';
-                moonIcon.style.opacity = '1';
-            } else {
-                sunIcon.style.opacity = '1';
-                moonIcon.style.opacity = '0';
-            }
-        }
+// Функция для обновления иконки
+function updateThemeIcon(theme) {
+    const toggle = document.getElementById('themeToggle');
+    if (!toggle) return;
+    
+    const sunIcon = toggle.querySelector('.theme-toggle__icon--sun');
+    const moonIcon = toggle.querySelector('.theme-toggle__icon--moon');
+    
+    if (theme === 'dark') {
+        sunIcon.style.opacity = '0';
+        moonIcon.style.opacity = '1';
+    } else {
+        sunIcon.style.opacity = '1';
+        moonIcon.style.opacity = '0';
+    }
+}
 
-        // Функция переключения темы
-        function toggleTheme() {
-            const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            applyTheme(newTheme);
-        }
+// Функция переключения темы
+function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    applyTheme(newTheme);
+}
 
-        // Инициализация темы при загрузке
-        document.addEventListener('DOMContentLoaded', function() {
-            const savedTheme = localStorage.getItem('theme') || 'light';
-            applyTheme(savedTheme);
-            
-            // Добавляем обработчик клика на переключатель
-            const themeToggle = document.getElementById('themeToggle');
-            if (themeToggle) {
-                themeToggle.addEventListener('click', toggleTheme);
-            }
-            
-            // Добавляем обработчик клавиатуры
-            document.addEventListener('keydown', function(e) {
-                if (e.ctrlKey && e.key === 't') {
-                    e.preventDefault();
-                    toggleTheme();
-                }
-            });
-        });
-
-        // Системные предпочтения
-        if (window.matchMedia) {
-            const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
-            
-            // Слушаем изменения системной темы
-            systemTheme.addEventListener('change', function(e) {
-                if (!localStorage.getItem('theme')) {
-                    applyTheme(e.matches ? 'dark' : 'light');
-                }
-            });
-            
-            // Применяем системную тему если нет сохраненной
-            if (!localStorage.getItem('theme')) {
-                applyTheme(systemTheme.matches ? 'dark' : 'light');
-            }
+// Инициализация темы при загрузке
+document.addEventListener('DOMContentLoaded', function() {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    applyTheme(savedTheme);
+    
+    // Добавляем обработчик клика на переключатель
+    const themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', toggleTheme);
+    }
+    
+    // Добавляем обработчик клавиатуры
+    document.addEventListener('keydown', function(e) {
+        if (e.ctrlKey && e.key === 't') {
+            e.preventDefault();
+            toggleTheme();
         }
-    </script>
+    });
+});
+
+// Системные предпочтения
+if (window.matchMedia) {
+    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    // Слушаем изменения системной темы
+    systemTheme.addEventListener('change', function(e) {
+        if (!localStorage.getItem('theme')) {
+            applyTheme(e.matches ? 'dark' : 'light');
+        }
+    });
+    
+    // Применяем системную тему если нет сохраненной
+    if (!localStorage.getItem('theme')) {
+        applyTheme(systemTheme.matches ? 'dark' : 'light');
+    }
+}
+</script>
 </body>
 </html>
